@@ -20,6 +20,8 @@ WildRydes.map = WildRydes.map || {};
             method: 'POST',
             url: _config.api.invokeUrl + '/ride',
             headers: {
+                "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
+                "Access-Control-Allow-Credentials" : true, // Required for cookies, authorization headers with HTTPS
                 Authorization: authToken
             },
             data: JSON.stringify({
